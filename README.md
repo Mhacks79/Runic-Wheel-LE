@@ -43,7 +43,7 @@ Install the compiled mod archive with Mod Organizer 2, preserving the supplied `
 
 ## Source publication status
 
-**Repository import in progress.** The documentation and selected original policy headers are published. The rest of the v0.25.1 C++ implementation, tests and artwork have been prepared as a separate Git-ready source package; the live repository is **not yet a complete source checkout**. Do not assume that cloning this repository currently produces a buildable DLL. See [SOURCE-STATUS.md](SOURCE-STATUS.md).
+**The original Runic Wheel LE v0.25.1 source tree is published in [`v0251/`](v0251/).** The project C++ implementation, optional KHA-OS menu integration, original artwork, build scripts and tests are included. Two independently owned KHA-OS interface headers are intentionally excluded pending permission to redistribute them; see [docs/THIRD-PARTY.md](docs/THIRD-PARTY.md). No game executable or Wheeler files are included.
 
 ## Source and building
 

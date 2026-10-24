@@ -13,6 +13,6 @@ Prepared from the locally verified `RunicWheelLE-v0.25.1-CENTERED-TRANSPARENT-RU
 - No `TESV.exe`, compiled DLL, Windows object/library, or Wheeler source/asset is included.
 - Two external KHA-OS SDK interface headers are intentionally not shipped pending redistribution-rights confirmation.
 
-**Important:** this manifest validates the prepared package, not a completed GitHub source import. As of this note, the complete `v0251/` tree still needs to be pushed by an authorized Git client. See [SOURCE-STATUS.md](SOURCE-STATUS.md).
+**Publication verification:** the upload script validates the 181 individual SHA-256 hashes before committing and verifies the exact remote branch commit after the push. See [SOURCE-STATUS.md](SOURCE-STATUS.md).
 
 Copyright © 2026 Mhacks79 for original Runic Wheel LE work; see [LICENSE](LICENSE) and [docs/THIRD-PARTY.md](docs/THIRD-PARTY.md).

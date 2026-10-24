@@ -19,7 +19,7 @@ The development ZIP stores the real code under `v0251/`, **not** in a fabricated
 - `v0251/quality/`, `v0251/qa/`: validation tools.
 - `v0251/build-v025.sh`, `v0251/verify-v024.py`, `v0251/generate_v024_imports.py`: final build path, PE checks and import-stub generation.
 
-**Source import is not yet complete.** See [../SOURCE-STATUS.md](../SOURCE-STATUS.md). A partial checkout is not buildable.
+**The original v0.25.1 source files are published.** Building still requires the external dependencies, proprietary game executable and authorized KHA-OS SDK described below.
 
 ## Prerequisites — provided privately
 

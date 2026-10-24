@@ -1,0 +1,56 @@
+{
+  "release": "0.19.0",
+  "date": "2026-10-23",
+  "status": "offline-qualified / game-test-pending",
+  "target": "Skyrim LE 1.9.32.0.8 + SKSE 1.7.3 x86",
+  "source": "d3862a73b7307153c9cae5e5faf38141ff0dde50413c47cd725682050093f198",
+  "imports": 31,
+  "exports": [
+    "SKSEPlugin_Load",
+    "SKSEPlugin_Query"
+  ],
+  "checks": [
+    "canonical-stack-source",
+    "RWL2-cursor-roundtrip",
+    "wheel-titles",
+    "scan-code-guard",
+    "school-icon-policy",
+    "art-rebuild",
+    "distinct-32-medallions",
+    "Win32-PE-ABI",
+    "native-preservation-diff",
+    "TESV-signatures",
+    "sanitizer-host"
+  ],
+  "mo2_files": {
+    "RunicWheelLE.dll": {
+      "sha256": "484e3fe3c610b2fed7b497a82cfe12e0b012d652ba9fe9f0ea226bfead7f256f",
+      "bytes": 62976
+    },
+    "RunicWheelLE.ini": {
+      "sha256": "06b745ee139ac856bf1005d292a12d6f0cf08a1902bfbb2d06d6f3cde8a34e6e",
+      "bytes": 5551
+    },
+    "RunicWheelIcons.rwtx": {
+      "sha256": "b73b8f0d729f0c5e28a43b30e429fd74312288842df7601537b4e4c5e955a626",
+      "bytes": 8388620
+    },
+    "RunicWheelFrame.rwtx": {
+      "sha256": "d91da498279a7ce5ea37a898cbcb8f57d07f9a647a2ffffdef1aaa7340ff3862",
+      "bytes": 4194316
+    },
+    "RunicWheelFont.rwtx": {
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a",
+      "bytes": 4194316
+    },
+    "RunicWheelPlaque.rwtx": {
+      "sha256": "5425ffb22b68fea4ecd66c1d7bc95904cd8315d0f8f2949b6336b4016703d811",
+      "bytes": 1048588
+    }
+  },
+  "known_limitations": [
+    "no Skyrim runtime test v019",
+    "ingredient use unavailable",
+    "generic variant-specific actions unverified"
+  ]
+}
