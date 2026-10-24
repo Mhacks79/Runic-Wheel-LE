@@ -1,0 +1,41 @@
+# Never distribute Bethesda/Skyrim proprietary binaries or private lab input
+TESV.exe
+**/TESV.exe
+*.pdb
+*.ilk
+*.idb
+*.obj
+*.o
+*.lib
+*.a
+*.dll
+*.exe
+*.exp
+*.map
+
+# Distribution archives and generated packages are not source
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Development workstation internals
+work/
+build/
+out/
+dist/
+.cache/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.vs/
+.idea/
+.vscode/
+logs/
+*.log
+*.tmp
+*.bak
+*.orig
+.DS_Store
+Thumbs.db
