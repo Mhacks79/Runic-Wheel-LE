@@ -1,0 +1,10 @@
+{
+  "version": "0.12.0-private-ui-test",
+  "date": "2026-10-23",
+  "last_player_confirmed": "0.11.2",
+  "source_sha256": "c7b450d385259a5488b1fb8779472b38036aaba1bc457645c0879671c3f2ab97",
+  "ini_sha256": "1d03207aa1cb11ff3d1501e4d18cabe6c205ab569b39362833e01a04fc963ac1",
+  "dll_sha256": "d13fae004c1910af036fdc93139907b489cd79557c16a09e0b43fc22d8e8c5ce",
+  "status": "offline verified only; new names/pictograms not validated in game",
+  "tesv_sha256": "d43f3de477ee751caf36c26ee0a20a06225c29c08dfd13c827b537b9ac56cbf2"
+}

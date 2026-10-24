@@ -1,0 +1,25 @@
+{
+  "candidate": "Runic Wheel LE v0.11.2 private spell engine-route corrective TEST",
+  "target": "Skyrim LE 1.9.32.0.8 / SKSE 1.7.3 / PE32 x86 (Clang MSVC ABI /EHa)",
+  "game_report": "User v0.11.1: equip-looking animation, spell unusable, jumping unavailable. Exact cause of movement impairment not proven.",
+  "proven_code_error": "v0.11.1 used EquipManager::EquipItem 0x006EF3E0 for SpellItem.",
+  "static_remedy": "Vanilla MagicMenu spell formType 0x16 calls EquipManager::EquipSpell 0x006EFAC0, three arguments ret 0x0C; updated plugin branch.",
+  "safety_switch": "EnableSpellActions=0 disables only spells; EnableNativeActions=0 disables all native item actions.",
+  "game_validation": "NOT_TESTED",
+  "public_release": "BLOCKED",
+  "checks": {
+    "game_binary_sha256": "d43f3de477ee751caf36c26ee0a20a06225c29c08dfd13c827b537b9ac56cbf2",
+    "commonlible_verified_addresses": 524,
+    "asan_ubsan": "PASS",
+    "negative_mutation": "PASS",
+    "win32_build": "PASS",
+    "preflight_fatal": 0,
+    "quality_dev_blocks": 0,
+    "ui_coverage_warning": "known"
+  },
+  "sha256": {
+    "dll": "1e93e7bf3b0548c8e754e81d9a01a5f1433197ac9a2155aa8faa019d309accb2",
+    "cpp": "59a2ce6ee529123abd7c142778df84b171b99e9ab48de4055103109e5609b4c2",
+    "ini": "0548386cea3325162dfe53d86a9ba97b046213d231fe4c8bdd676b921a03e5f3"
+  }
+}

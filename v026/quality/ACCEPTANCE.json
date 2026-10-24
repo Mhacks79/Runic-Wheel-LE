@@ -1,0 +1,180 @@
+{
+  "project": "Runic Wheel LE",
+  "target": "Skyrim LE 1.9.32.0.8 / SKSE 1.7.3 / x86",
+  "baseline": "v0.10.0 (observed in game: UI-read/formId add, slowed time, co-save; no real equipment)",
+  "candidate": "v0.11.0 private native actions/visual beta (OFFLINE ONLY, NOT GAME-TESTED)",
+  "rules": "Public release BLOCKED until exact v0.11 DLL/INI hashes receive game evidence. Test privately on disposable save; action disable available.",
+  "requirements": [
+    {
+      "id": "UX-01",
+      "priority": "P0",
+      "requirement": "Ouverture par clic molette, sans activation de marche/course",
+      "acceptance": "Jeu libre: clic molette ouvre et referme la roue",
+      "history": "confirmed_in_v02",
+      "evidence": "v0.10 user observed controls generally functioning and edit/add from inventory; detailed scenario-specific checks not documented",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "UX-02",
+      "priority": "P0",
+      "requirement": "Navigation par mouvement relatif de souris, sans flèches",
+      "acceptance": "Les 8 secteurs répondent à la souris, caméra non déplacée par le geste",
+      "history": "confirmed_in_v02",
+      "evidence": "v0.10 user observed controls generally functioning and edit/add from inventory; detailed scenario-specific checks not documented",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "UX-03",
+      "priority": "P0",
+      "requirement": "Pas de F2/F3/F4/F5 ni de palette manuelle",
+      "acceptance": "Aucune bascule édition manuelle; ancienne configuration ignorée",
+      "history": "failed_in_v07",
+      "evidence": "F2 encore actif signalé par utilisateur",
+      "current_candidate_game_status": "UNTESTED"
+    },
+    {
+      "id": "CTX-01",
+      "priority": "P0",
+      "requirement": "Édition automatique seulement depuis inventaire/magie",
+      "acceptance": "Mode édition activé et désactivé en fonction du vrai menu ouvert",
+      "history": "failed_in_v07",
+      "evidence": "v0.10 user observed controls generally functioning and edit/add from inventory; detailed scenario-specific checks not documented",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "CTX-02",
+      "priority": "P0",
+      "requirement": "Capture réelle de la ligne survolée",
+      "acceptance": "L’élément qui suit le pointeur est identifié avec contexte/mapping fiables",
+      "history": "v010_formid_ui_task_confirmed",
+      "evidence": "V0.10 UI task resolved selected FormID + visible occupied sectors; full hover identity/variants not validated",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "CTX-03",
+      "priority": "P0",
+      "requirement": "Clic gauche ajoute et empile une deuxième entrée",
+      "acceptance": "Second item dans la même case, sans écraser le premier",
+      "history": "not_tested_in_game",
+      "evidence": "V0.10 added axe and equipment; no evidence of two independent items stacked in the same sector",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "CTX-04",
+      "priority": "P0",
+      "requirement": "Clic droit supprime l’entrée courante",
+      "acceptance": "Retrait sans supprimer les autres entrées",
+      "history": "not_tested_in_game",
+      "evidence": "aucun résultat en jeu pour cette exigence",
+      "current_candidate_game_status": "UNTESTED"
+    },
+    {
+      "id": "CTX-05",
+      "priority": "P0",
+      "requirement": "Molette choisit les entrées d’une case",
+      "acceptance": "Défilement reproductible et borné",
+      "history": "not_tested_in_game",
+      "evidence": "aucun résultat en jeu pour cette exigence",
+      "current_candidate_game_status": "UNTESTED"
+    },
+    {
+      "id": "TIME-01",
+      "priority": "P0",
+      "requirement": "Ralentissement hors menu, par défaut 10 %",
+      "acceptance": "Lecture de contrôle de la vitesse après ouverture",
+      "history": "v010_confirmed_in_game",
+      "evidence": "Tester confirmed slowdown, game log SLOWDOWN applied and verified by readback",
+      "current_candidate_game_status": "PASS_REPORTED_V010"
+    },
+    {
+      "id": "TIME-02",
+      "priority": "P0",
+      "requirement": "Restauration temps sur fermeture/Alt-Tab/load/crash traité",
+      "acceptance": "Vitesse antérieure restaurée sans écraser changement d’un autre mod",
+      "history": "not_tested_in_game",
+      "evidence": "v0.10 logs RESTORE requested, but no readback and not specifically confirmed by tester",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "SAVE-01",
+      "priority": "P0",
+      "requirement": "Co-save SKSE par personnage",
+      "acceptance": "Ajouter deux entrées, sauvegarder, recharger, vérifier les deux",
+      "history": "v010_confirmed_in_game",
+      "evidence": "Co-save WRITTEN and loaded, tester confirmed occupied dots after save/load",
+      "current_candidate_game_status": "PASS_REPORTED_V010"
+    },
+    {
+      "id": "SAFE-01",
+      "priority": "P0",
+      "requirement": "Aucun crash attribuable au plugin lors du scénario",
+      "acceptance": "Lancement, nouveau jeu, inventaire, save/reload, plusieurs ouvertures",
+      "history": "failed_in_v07",
+      "evidence": "No crash reported during this v0.10 session; earlier v0.7 crash remains unattributed",
+      "current_candidate_game_status": "PARTIAL_V010"
+    },
+    {
+      "id": "SAFE-02",
+      "priority": "P0",
+      "requirement": "Journal de chargement et diagnostic même sous MO2",
+      "acceptance": "Lire le log en dossier temporaire avant installation hooks",
+      "history": "not_tested_in_game",
+      "evidence": "Both plugin log and TEMP diagnostic log obtained, same content SHA256",
+      "current_candidate_game_status": "PASS_REPORTED_V010"
+    },
+    {
+      "id": "COMPAT-01",
+      "priority": "P1",
+      "requirement": "AZERTY/QWERTY + configuration contrôles",
+      "acceptance": "Tester deux dispositions et rebind sans conflit",
+      "history": "not_tested_in_game",
+      "evidence": "aucun résultat en jeu pour cette exigence",
+      "current_candidate_game_status": "UNTESTED"
+    },
+    {
+      "id": "COMPAT-02",
+      "priority": "P1",
+      "requirement": "ENB, overlays, autres SKSE",
+      "acceptance": "Essai du chemin DX9 chaîné avec la configuration habituelle",
+      "history": "not_tested_in_game",
+      "evidence": "aucun résultat en jeu pour cette exigence",
+      "current_candidate_game_status": "UNTESTED"
+    },
+    {
+      "id": "ACT-01",
+      "priority": "P0",
+      "requirement": "Équipement réel et variantes enchantées",
+      "acceptance": "Vérification exemplaire inventaire + thread moteur avant action",
+      "history": "v010_catalog_only_confirmed",
+      "evidence": "V0.11 equip, unequip, learned spell, consumable request code compiles; requires in-game observation. Variants deliberately refused. Cannot claim true ownership of exact variant.",
+      "current_candidate_game_status": "EXPERIMENTAL_NOT_GAME_TESTED"
+    },
+    {
+      "id": "VIS-01",
+      "priority": "P0",
+      "requirement": "Readable enlarged transparent wheel",
+      "acceptance": "Verify wheel larger than v0.10, translucency configurable and category glyphs visible.",
+      "history": "new_v011",
+      "evidence": "Offline implementation only",
+      "current_candidate_game_status": "NOT_TESTED"
+    },
+    {
+      "id": "VIS-02",
+      "priority": "P0",
+      "requirement": "Per-click visible confirmation",
+      "acceptance": "Verify ADDED/REMOVED/QUEUED/REFUSED/accepted request banner remains visible for ClickFeedbackMs.",
+      "history": "new_v011",
+      "evidence": "Offline implementation only",
+      "current_candidate_game_status": "NOT_TESTED"
+    },
+    {
+      "id": "ACT-02",
+      "priority": "P0",
+      "requirement": "Consumables and spell hand equip",
+      "acceptance": "Observe actual consumption and equipped spell in Skyrim; do not confuse submitted request with applied effect.",
+      "history": "new_v011",
+      "evidence": "Offline implementation only",
+      "current_candidate_game_status": "NOT_TESTED"
+    }
+  ]
+}

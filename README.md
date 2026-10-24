@@ -19,6 +19,8 @@
 - Up to **3 pages × 8 sectors × 4 items** per sector (96 entries). Reducing visible pages/sectors does not remove stored assignments.
 - Independent Nordic wheel artwork, distinct heraldic equipment icons and separate magic-school, shout and power medallions.
 - Inventory/Magic assignment, stack scrolling and previews, contextual editor, undo/redo and advanced sector/page management.
+- Weapons, armor, ammo, potions, food, poisons, ingredients, torches, scrolls, spells, powers and shouts, from any mod.
+- Tempered, enchanted or renamed gear: the wheel keeps the exact copy you put on it.
 - Customizable visual scale, placement, captions, palettes, input bindings and time slowdown.
 - Optional **KHA-OS v0.5L** configuration menu; the wheel runs without KHA-OS.
 - Uses SKSE co-save serialization for wheel assignments and an INI for settings.
@@ -43,7 +45,7 @@ Install the compiled mod archive with Mod Organizer 2, preserving the supplied `
 
 ## Source publication status
 
-**The original Runic Wheel LE v0.25.1 source tree is published in [`v0251/`](v0251/).** The project C++ implementation, optional KHA-OS menu integration, original artwork, build scripts and tests are included. Two independently owned KHA-OS interface headers are intentionally excluded pending permission to redistribute them; see [docs/THIRD-PARTY.md](docs/THIRD-PARTY.md). No game executable or Wheeler files are included.
+The complete v0.26.0 source is in `v026/`. The KHA-OS interface headers are not included (see [SOURCE-STATUS.md](SOURCE-STATUS.md)); with them and the SKSE LE sources, `v026/build-v026.bat` builds the DLL.
 
 ## Source and building
 
@@ -53,7 +55,7 @@ Offline test success and a valid PE32 DLL **do not imply validation in game**. T
 
 ## Current limitations
 
-Raw ingredient consumption from the wheel is deliberately unsupported pending a verified native engine route. Customized item-instance selection is guarded rather than guessed. Changing page/sector visibility does not expand the fixed co-save model.
+A tempered, enchanted or renamed copy that you sold or dropped is refused rather than replaced by another copy. Entries made before v0.26 do not remember which copy they were: they use an ordinary copy first. Changing page/sector visibility does not expand the fixed co-save model.
 
 ## Source-available, not open source
 

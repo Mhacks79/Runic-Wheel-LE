@@ -1,0 +1,43 @@
+{
+  "version": "0.21.0",
+  "status": "private - offline qualified - runtime pending",
+  "target": "Skyrim LE 1.9.32.0.8, SKSE 1.7.3",
+  "files": {
+    "RunicWheelLE.dll": {
+      "sha256": "5913242b9afe5681b87742ce32181305024363dc551b3e03a04d274e5f315340",
+      "bytes": 77312
+    },
+    "RunicWheelLE.ini": {
+      "sha256": "67ac3ff43af64c0ddc8d75d93a27a28078545f534ac9dcb69103390c1087360f",
+      "bytes": 7534
+    },
+    "RunicWheelIcons.rwtx": {
+      "sha256": "b73b8f0d729f0c5e28a43b30e429fd74312288842df7601537b4e4c5e955a626",
+      "bytes": 8388620
+    },
+    "RunicWheelFrame.rwtx": {
+      "sha256": "d91da498279a7ce5ea37a898cbcb8f57d07f9a647a2ffffdef1aaa7340ff3862",
+      "bytes": 4194316
+    },
+    "RunicWheelFont.rwtx": {
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a",
+      "bytes": 4194316
+    },
+    "RunicWheelPlaque.rwtx": {
+      "sha256": "5425ffb22b68fea4ecd66c1d7bc95904cd8315d0f8f2949b6336b4016703d811",
+      "bytes": 1048588
+    }
+  },
+  "exports": [
+    "SKSEPlugin_Load",
+    "SKSEPlugin_Query"
+  ],
+  "windows_imports": 31,
+  "native_equip_and_save_unmodified_vs": "v0.20",
+  "advanced_editor_stress": {
+    "random_operations": 35000,
+    "serialize_roundtrips": 2059
+  },
+  "expected_mo2_files": 6,
+  "tesv_exe_redistributed": false
+}

@@ -1,0 +1,12 @@
+{
+  "version": "v0.12.1",
+  "channel": "PRIVATE_DIAGNOSTIC",
+  "baseline": "v0.12.0 game reported functional except shield/ingredient refusals",
+  "dll_sha256": "25aef23ef1194ca547b00695ec3a0a71ec96c89f4c2f90929e8e4a1555794016",
+  "ini_sha256": "2836e779be0fe78b237858deda6e9ddeb4a0f3e19b6e3809ce800d80800cb0a2",
+  "source_sha256": "cd53f3cecd18ff44e34fb9feb406f5c52c86165dc20b244af5347516ea361d23",
+  "runtime_validation": "NOT PERFORMED",
+  "ingredients": "catalogue only, no native eating",
+  "controls": "unmodified",
+  "spells": "original v0.11.2 route retained"
+}

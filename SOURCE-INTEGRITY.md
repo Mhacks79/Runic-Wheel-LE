@@ -1,18 +1,9 @@
-# v0.25.1 source-upload integrity
+# v0.26.0 source integrity
 
-Prepared from the locally verified `RunicWheelLE-v0.25.1-CENTERED-TRANSPARENT-RUNE-SOURCES.zip`.
+`SOURCES-SHA256.json` lists the SHA-256 of all 212 files of this tree.
 
-- Curated source package: `RunicWheelLE-v0.25.1-GITHUB-PUBLISH-SOURCES.zip`
-- Package SHA-256: `70d7b3b2c18fb754f829bc9b56c02be1d0f258f907bd178cf9ba841f8b3cb57d`
-- Total ZIP members: **185**
-- Original project source/resources under `v0251/`: **182**
-- `SOURCES-SHA256.json`: individually records all 182 source/resource hashes.
-- ZIP CRC check: passed.
-- All 182 file hashes verified against their packaged bytes.
-- Original C++ implementation and hosted menu are present in the prepared package.
-- No `TESV.exe`, compiled DLL, Windows object/library, or Wheeler source/asset is included.
-- Two external KHA-OS SDK interface headers are intentionally not shipped pending redistribution-rights confirmation.
+Release DLL built from it: `RunicWheelLE.dll`, SHA-256 `e0716a4fe8d1dc7796986ba84797ea2acd1b4cddb9c9ca485040bfdf82af647b`.
 
-**Publication verification:** the upload script validates the 181 individual SHA-256 hashes before committing and verifies the exact remote branch commit after the push. See [SOURCE-STATUS.md](SOURCE-STATUS.md).
+No `TESV.exe`, compiled DLL, object file, SKSE source or Wheeler material is included. The two KHA-OS interface headers are left out; see [SOURCE-STATUS.md](SOURCE-STATUS.md).
 
-Copyright © 2026 Mhacks79 for original Runic Wheel LE work; see [LICENSE](LICENSE) and [docs/THIRD-PARTY.md](docs/THIRD-PARTY.md).
+Copyright (c) 2026 Mhacks79 for original Runic Wheel LE work; see [LICENSE](LICENSE) and [docs/THIRD-PARTY.md](docs/THIRD-PARTY.md).

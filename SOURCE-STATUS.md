@@ -1,14 +1,11 @@
-# Source publication status — v0.25.1
+# Source publication status - Runic Wheel LE v0.26.0
 
-The original Runic Wheel LE source files in **`v0251/`** were uploaded by
-`PUBLIER-SUR-GITHUB.cmd` from a 181-file SHA-256-verified source package.
+This repository holds the complete v0.26.0 native implementation under `v026/`: the plugin (`RunicWheelV011.cpp`), the hosted KHA-OS panel (`RunicKhaosMenu.inl`), every policy header, the host tests and contract scripts, the original artwork sources and the build script.
 
-The public tree contains the original plugin C++ implementation, KHA-OS menu
-integration, build/test scripts and original resources. It does not contain
-TESV.exe, private workstation data, compiled plugin releases, or Wheeler code.
+**Not included, on purpose:**
 
-Two external interface headers (`KhaosAPI.h`, `KhaosThemeAPI.h`) were
-intentionally excluded pending redistribution-rights verification; use an
-authorized KHA-OS SDK when compiling.
+- `KhaosAPI.h` and `KhaosThemeAPI.h`, the KHA-OS interface headers, pending confirmation of their redistribution rights. Get them from the KHA-OS integration kit and drop them into `v026/`.
+- The SKSE LE 1.7.3 sources and `TESV.exe`. Both are external prerequisites.
+- Compiled DLLs and the `.rwtx` texture files. Those ship on the mod page.
 
-**Source available, all rights reserved.** See LICENSE.
+No Wheeler source code, DLL or assets are part of this repository. The repository's original material is **source available / all rights reserved**.

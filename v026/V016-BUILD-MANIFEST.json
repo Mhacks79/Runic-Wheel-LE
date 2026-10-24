@@ -1,0 +1,53 @@
+{
+  "project": "Runic Wheel LE",
+  "version": "0.16.0",
+  "status": "PRIVATE - offline tests passed; not game validated",
+  "baseline_gameplay": "v0.12.1; 0.15 visual and war cry power game-tested by user",
+  "compiled_abi": "Win32 PE32 x86 MSVC ABI SEH / SKSE 1.7.3",
+  "windows_imports": "identical 31 functions vs v0.15; msvcrt/kernel32/user32",
+  "runtime_files": {
+    "Data/SKSE/Plugins/RunicWheelFont.rwtx": {
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a",
+      "bytes": 4194316
+    },
+    "Data/SKSE/Plugins/RunicWheelFrame.rwtx": {
+      "sha256": "d91da498279a7ce5ea37a898cbcb8f57d07f9a647a2ffffdef1aaa7340ff3862",
+      "bytes": 4194316
+    },
+    "Data/SKSE/Plugins/RunicWheelIcons.rwtx": {
+      "sha256": "7190c44e82ab1a0a1597cb3f01cc8c05cd6fa6b7745b409ff0038d77c28f6027",
+      "bytes": 8388620
+    },
+    "Data/SKSE/Plugins/RunicWheelLE.dll": {
+      "sha256": "0db7c5a0ec7921157cdc45e3911cadf6d1f1afa9514e28ef2c49cce7b3ce4740",
+      "bytes": 59904
+    },
+    "Data/SKSE/Plugins/RunicWheelLE.ini": {
+      "sha256": "8e67f4272912ebb415de0cf5382c426b6ecce56da2ee8a838084899637d3e0e7",
+      "bytes": 4589
+    },
+    "Data/SKSE/Plugins/RunicWheelPlaque.rwtx": {
+      "sha256": "5425ffb22b68fea4ecd66c1d7bc95904cd8315d0f8f2949b6336b4016703d811",
+      "bytes": 1048588
+    }
+  },
+  "reference_source_sha256": "65fa3c3f7e8d0cc386f884be3202d394999cd535a905ff82b18f023139cc1e0d",
+  "reference_header_sha256": "08f527993ddc5199a780617d56aa1acabccc57868c2706b17974f7079ef1008f",
+  "tests": [
+    "V015VisualContractTests.py",
+    "V016PresentationContractTests.py",
+    "PresentationTimelineTests.cpp (Release + ASAN/UBSAN)",
+    "V015 inherited visual and native suites",
+    "quality/validate.py",
+    "verify-v011.py"
+  ],
+  "known_unvalidated": [
+    "actual Skyrim/ENB render and click effects",
+    "shout form TESShout",
+    "exact enchanted/tempered item instances",
+    "ingredient native consumption",
+    "gamepad in game",
+    "quick focus and quick reopen under ENB"
+  ],
+  "date": "2026-10-23"
+}

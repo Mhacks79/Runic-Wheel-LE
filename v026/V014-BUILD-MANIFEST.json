@@ -1,0 +1,42 @@
+{
+  "version": "0.14.0-private-pro-visual-rebuild",
+  "gameplay_baseline": "v0.12.1 player-confirmed; native action code unchanged",
+  "visual_game_validation": "NOT TESTED IN SKYRIM; offline previews are not runtime captures",
+  "checks": {
+    "compiled_msvc_abi_pe32_seh": "PASS",
+    "native_equip_source_comparison": "PASS",
+    "host_release_and_asan_ubsan_targeted": "PASS",
+    "art_assets_32_isolated_unique_cells": "PASS",
+    "unicode_french_legacy_cp1252": "PASS",
+    "static_input_spell_owned_inventory_contracts": "PASS",
+    "screen_layout_simulations": "720p 1080p 1440p PASS",
+    "commonlible_addresses": "525; every address holds",
+    "preflight": "0 fatal; warnings reviewed as old verified engine sites, constants or test vectors",
+    "whole_suite_latest_run": "INTERRUPTED BY TIME LIMIT; earlier complete host run passed before log wording only changed",
+    "in_game": "PENDING: no actual in-game DX9 pass"
+  },
+  "files": {
+    "RunicWheelLE.dll": {
+      "bytes": 52736,
+      "sha256": "0ba4a70c9c4918e3b70a9ff65aedf07ef10f5163bc409a6d7cc47c1bc1edbaa1"
+    },
+    "RunicWheelLE.ini": {
+      "bytes": 4038,
+      "sha256": "24671eb975b323269ecc6a3bfeaa8e062b3bf652b83f0ab5cc412ad601917fa0"
+    },
+    "RunicWheelIcons.rwtx": {
+      "bytes": 8388620,
+      "sha256": "57cb3e4b9614584d4df16daf707f9efb2ed510c7d189b9f62f0232dc6f8a8cea"
+    },
+    "RunicWheelFrame.rwtx": {
+      "bytes": 4194316,
+      "sha256": "f603fce0ed438b48465c964f82467c811bdb4d279ec464958ecb751847aae4ab"
+    },
+    "RunicWheelFont.rwtx": {
+      "bytes": 4194316,
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a"
+    }
+  },
+  "source_sha256": "ca1977adafa22d448457a0f611c3303d73a62987bac08930e08d7882e82fe9dc",
+  "generation_sha256": "be062f9c2c47472fd68f3ee244d0b70eb863b202c18388efab584f500b890619"
+}

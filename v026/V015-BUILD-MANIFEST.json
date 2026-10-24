@@ -1,0 +1,42 @@
+{
+  "version": "0.15.0",
+  "target": "Skyrim LE x86 SKSE 1.7.3",
+  "status": "PRIVATE VISUAL TEST \u2014 in-game graphics unverified",
+  "files": {
+    "RunicWheelLE.dll": {
+      "sha256": "da8d5e782b5802eaf9ef29e56641eaf3967dce110e4927843ad58b6a632d0d1e",
+      "bytes": 53760
+    },
+    "RunicWheelLE.ini": {
+      "sha256": "771fc920e39c91ae9821b0ced3095dced85080f41b0b95679d685e1e7cca5278",
+      "bytes": 4199
+    },
+    "RunicWheelIcons.rwtx": {
+      "sha256": "7190c44e82ab1a0a1597cb3f01cc8c05cd6fa6b7745b409ff0038d77c28f6027",
+      "bytes": 8388620
+    },
+    "RunicWheelFrame.rwtx": {
+      "sha256": "d91da498279a7ce5ea37a898cbcb8f57d07f9a647a2ffffdef1aaa7340ff3862",
+      "bytes": 4194316
+    },
+    "RunicWheelFont.rwtx": {
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a",
+      "bytes": 4194316
+    },
+    "RunicWheelPlaque.rwtx": {
+      "sha256": "5425ffb22b68fea4ecd66c1d7bc95904cd8315d0f8f2949b6336b4016703d811",
+      "bytes": 1048588
+    }
+  },
+  "gameplay_reference": "v0.12.1",
+  "checks": {
+    "pe_x86": true,
+    "skse_exports": true,
+    "commonlible_rows": 525,
+    "rwtx_headers": true,
+    "icon_subtypes": 32,
+    "visual_contract": true,
+    "visual_previews": "offline only",
+    "in_game": false
+  }
+}

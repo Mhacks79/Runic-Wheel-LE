@@ -1,0 +1,39 @@
+{
+  "version": "0.17.0",
+  "private": true,
+  "skyrim": "LE 1.9.32.0.8",
+  "skse": "1.7.3",
+  "release_scope": "offline-qualified; no in-game v017 test",
+  "files": [
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelLE.dll",
+      "size": 60416,
+      "sha256": "be75a71497415ca20988b86e31d83315cca915ac8f46cc7e79c23e6eed62d1a1"
+    },
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelLE.ini",
+      "size": 5002,
+      "sha256": "f00e97055518f86c92f2c53876a10708a7694843dd1f219ee03fa636626d293b"
+    },
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelIcons.rwtx",
+      "size": 8388620,
+      "sha256": "8404bb660511dee7ad82a6ee08eec191236eb4dc2f65e3ee6b7f157d134d012f"
+    },
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelFrame.rwtx",
+      "size": 4194316,
+      "sha256": "d91da498279a7ce5ea37a898cbcb8f57d07f9a647a2ffffdef1aaa7340ff3862"
+    },
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelFont.rwtx",
+      "size": 4194316,
+      "sha256": "60972fc9fa6875cd0a23c9eafa6d423e47f1ee95892d6c5473c1d134955a191a"
+    },
+    {
+      "path": "Data/SKSE/Plugins/RunicWheelPlaque.rwtx",
+      "size": 1048588,
+      "sha256": "5425ffb22b68fea4ecd66c1d7bc95904cd8315d0f8f2949b6336b4016703d811"
+    }
+  ]
+}

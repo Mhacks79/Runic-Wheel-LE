@@ -21,9 +21,9 @@ Runic Wheel LE is a native SKSE 1.7.3 plugin targeting the original 32-bit Skyri
 - Never assume FormID uniquely identifies an enchanted or customized item instance.
 - A hidden page or sector retains saved contents; visible capacity cannot exceed the fixed 3 × 8 × 4 model.
 - Releasing or losing input focus must not trap Skyrim's UI.
-- Raw ingredient use remains disabled until a provably safe engine route is established.
+- Ingredients are used through the same EquipManager call as the vanilla inventory, never a guessed route.
 - Reusable engine discoveries belong in CommonLibLE and Knowledge within the **private laboratory**, not in this public repo with proprietary executable evidence.
 
 ## Maintenance status
 
-Current game-tested baseline reported by the author: **v0.25.1**, built on the v0.25 native implementation with the centered transparent rune as an artwork-only update. Coverage across all mod configurations is not claimed.
+Current game-tested baseline reported by the author: **v0.25.1**. v0.26.0 adds exact item copies, shouts, powers, scrolls and ingredients, and isolates its drawing from post-process mods; it has not been tested in game yet. Coverage across all mod configurations is not claimed.
