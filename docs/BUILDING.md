@@ -1,60 +1,58 @@
-# Building Runic Wheel LE from source
+# Native build — Runic Wheel LE v0.25.1
 
-## Target (strict)
+## Exact target
 
-- Skyrim Legendary Edition / Classic: **TESV.exe 1.9.32.0.8**
-- SKSE LE: **1.7.3**
-- Windows **PE32**, Intel **x86**, MSVC-compatible 32-bit ABI
-- C++17 and Direct3D 9 (D3D9 COM ABI)
-- Optional **KHA-OS v0.5L** hosted configuration ABI
+- Skyrim **Legendary Edition 1.9.32.0.8**, SKSE **LE 1.7.3**.
+- Windows PE32 **x86**; MSVC-compatible ABI and SEH.
+- Native C++17, Direct3D 9 COM device interfaces.
+- Optional KHA-OS v0.5L host via separately obtained interface headers.
 
-**Never** substitute Skyrim SE/AE offsets, SSE SKSE headers, 64-bit libraries or common SE hook addresses.
+## Current source tree
 
-## Source code layout
+The development ZIP stores the real code under `v0251/`, **not** in a fabricated split `src/` or `include/` hierarchy.
 
-- `src/RunicWheelV011.cpp`: native plugin entry points and engine integration
-- `src/RunicKhaosMenu.inl`: optional KHA-OS settings UI
-- `include/`: model, input, animation, rendering policy and serialization helpers
-- `tests/`: static contracts, behavior tests and regressions
-- `tools/`: build, import-stub and verification scripts
-- `artwork/`: original texture-generation inputs and methods (as available)
+- `v0251/RunicWheelV011.cpp`: native plugin implementation, SKSE lifecycle, D3D9 rendering.
+- `v0251/RunicKhaosMenu.inl`: hosted KHA-OS control centre.
+- `v0251/*.h`: model, serialization, input policies, rendering and guarded native action helpers.
+- `v0251/*Tests.cpp`, `v0251/*Tests.py`: offline tests and contract checks.
+- `v0251/art/`, `v0251/artwork/`: original image sources and RWAT generation.
+- `v0251/quality/`, `v0251/qa/`: validation tools.
+- `v0251/build-v025.sh`, `v0251/verify-v024.py`, `v0251/generate_v024_imports.py`: final build path, PE checks and import-stub generation.
 
-## Prerequisites
+**Source import is not yet complete.** See [../SOURCE-STATUS.md](../SOURCE-STATUS.md). A partial checkout is not buildable.
 
-You provide locally:
-1. Licensed installation of TESV.exe 1.9.32.0.8 **outside this repository**.
-2. SKSE LE 1.7.3 SDK headers and appropriate redistribution rights.
-3. Clang/LLVM with `clang-cl`, `lld-link` and `llvm-objdump` or equivalent MSVC x86 toolchain.
-4. Valid x86 Microsoft-compatible import libraries, Windows APIs and optional KHA-OS interface definitions.
-5. Python 3 for QA scripts; additional packages such as `pefile` may be required for PE/signature checks.
-6. Pillow and NumPy only if regenerating RWAT artwork.
+## Prerequisites — provided privately
 
-The private SkyrimLE-DLL-RE-Laboratory workstation used during development is **not part of this public repository** and must not be uploaded to a public GitHub repository: it contains a private TESV.exe.
+1. Legally obtained `TESV.exe` (exact build 1.9.32.0.8), **never put it on public GitHub**.
+2. Official SKSE **LE 1.7.3** SDK, used with redistribution restrictions respected.
+3. `clang-cl`, `lld-link`, `llvm-objdump` or an equivalent correctly configured MSVC x86 toolchain.
+4. Valid Win32/MSVC-compatible import libraries as required for linking.
+5. Original KHA-OS interface headers **`KhaosAPI.h` and `KhaosThemeAPI.h`** obtained from an authorized KHA-OS SDK.
+6. Python, `pefile`, plus Pillow/NumPy if regenerating images.
 
-## Build procedure
+The private `SkyrimLE-DLL-RE-Laboratory` is not a public source dependency or redistributable repository component.
 
-The original development sources use `build-v025.sh`, which expects a lab root containing `sdk/skse-le-sdk`, `sdk/TESV.exe` (or the `TESV_EXE` environment variable), and toolchain/import-stub helpers.
+## Build from the private lab layout
 
-With the appropriate dependencies prepared **locally**, run:
+The existing script derives the lab root by navigating three parents above `v0251`. Place the source directory under the private lab as `work/RunicWheelLE/v0251/`, and ensure `RUNIC_LAB_ROOT` points to that lab:
 
 ```bash
-export RUNIC_LAB_ROOT="/path/to/your/private/laboratory"
-export TESV_EXE="/path/to/private/TESV.exe"
-export CLANG_CL="/path/to/clang-cl"
-bash tools/build-v025.sh build/runicwheel
+export RUNIC_LAB_ROOT="/absolute/path/to/your/private/SkyrimLE-DLL-RE-Laboratory"
+export TESV_EXE="/absolute/path/to/private/TESV.exe"
+export CLANG_CL="/absolute/path/to/clang-cl"
+bash v0251/build-v025.sh work/_runic_build
 ```
 
-On Windows, use an appropriate shell environment or adapt the build for a native Visual Studio x86 target; Unix-style paths above are illustrative only. The scripts may require environment-specific adjustment. **Do not assume a fresh checkout builds independently without the stated SDK/toolchain.**
+On native Windows, use a compatible shell or port these commands to your existing MSVC x86 build configuration. Paths and toolchain discovery may need adaptation. The original script calls many offline tests and the x86 linker; the `verify-v024.py` naming is historical.
 
-## Verification
+## Acceptance checks
 
-The historical validation suite checks, as available:
-- model input/scroll/stack state, serialization and KHA-OS window policy;
-- x86 PE format, expected SKSE and optional KHA-OS exports;
-- import and SEH properties;
-- TESV.exe signature bytes for the exact LE executable hash;
-- regression scenarios and source-integrity constraints.
+- Native PE32/x86 DLL, no unexpected entrypoint;
+- both `SKSEPlugin_Query` / `SKSEPlugin_Load` exports, plus optional six hosted KHA-OS exports;
+- expected Win32 imports and SEH layout;
+- signatures match the **exact** TESV executable SHA-256;
+- serialization/inventory/stack actions, input, UI layout and KHA-OS focused-window regressions;
+- asset integrity, shader-independent artwork and correct alpha;
+- source/build manifest plus SHA-256.
 
-Build success ≠ safe runtime hooks. A passing signature check ≠ proof of correct engine calling convention. **Only real in-game testing establishes gameplay behavior.**
-
-Never commit `TESV.exe`, SKSE SDK files if their redistribution is not authorized, game-derived binary assets, private import libraries or build logs.
+**Compilation ≠ runtime validation**. Static address evidence ≠ validated hook behavior. Test the precise generated binary in a dedicated LE profile with save backups.

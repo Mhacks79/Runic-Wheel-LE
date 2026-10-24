@@ -41,6 +41,10 @@ Install the compiled mod archive with Mod Organizer 2, preserving the supplied `
 
 > This repository is intended for **source inspection and development**, not distribution of proprietary Bethesda executables or the private reverse-engineering laboratory. Obtain release binaries from the authorized mod distribution page.
 
+## Source publication status
+
+**Repository import in progress.** The documentation and selected original policy headers are published. The rest of the v0.25.1 C++ implementation, tests and artwork have been prepared as a separate Git-ready source package; the live repository is **not yet a complete source checkout**. Do not assume that cloning this repository currently produces a buildable DLL. See [SOURCE-STATUS.md](SOURCE-STATUS.md).
+
 ## Source and building
 
 See **[docs/BUILDING.md](docs/BUILDING.md)** for the native x86 build, host prerequisites, SDK boundary and verification procedure; **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for the module design; and **[docs/THIRD-PARTY.md](docs/THIRD-PARTY.md)** for provenance.
